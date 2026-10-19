@@ -212,8 +212,8 @@ footer{padding:36px 0;font-size:13px;color:var(--sub);text-align:center;line-hei
 
 <div class="facts">
   <div class="wrap">
-    <div class="fact"><b><span class="count" data-to="35">0</span><small>万円〜</small></b><span>あん摩マッサージ指圧師の月給（施術管理者は40万円〜）</span></div>
-    <div class="fact"><b><span class="count" data-to="126">0</span><small>日</small></b><span>年間休日（土日祝・年末年始）</span></div>
+    <div class="fact"><b><span class="count" data-to="35">35</span><small>万円〜</small></b><span>あん摩マッサージ指圧師の月給（施術管理者は40万円〜）</span></div>
+    <div class="fact"><b><span class="count" data-to="126">126</span><small>日</small></b><span>年間休日（土日祝・年末年始）</span></div>
     <div class="fact"><b><span class="count" data-to="0">0</span><small>時間</small></b><span>残業</span></div>
     <div class="fact"><b>8<small>〜</small>10<small>件</small></b><span>1日の訪問件数（1件20分）</span></div>
   </div>
@@ -452,7 +452,7 @@ footer{padding:36px 0;font-size:13px;color:var(--sub);text-align:center;line-hei
       cio.unobserve(el);
     });
   },{threshold:.6});
-  document.querySelectorAll('.count').forEach(function(el){ cio.observe(el); });
+  document.querySelectorAll('.count').forEach(function(el){ if(!rm) el.textContent='0'; cio.observe(el); });
 
   // timeline fill follows scroll
   var tl=document.getElementById('tl'), fill=document.getElementById('tlfill'), steps=tl.querySelectorAll('.step');
